@@ -5,8 +5,13 @@
 #and if the number is divisible by 6 print `彡┻━┻`.
 #If the number is divisible by 4 and 6 print `(ノಠ益ಠ)ノ彡┻━┻`.
 
-# Get an input number
-N = int(input ('Please input a positive integer: '))
+# Get a valid input number
+while True:
+    try:
+        N = int(input ('Please input a positive integer: '))
+        break
+    except ValueError:
+        print("Oops!  That was no valid number.  Try again...")
 
 # Check if the input number can be divisible by 4 or 6 through loop
 for i in range(N, 0, -1):
